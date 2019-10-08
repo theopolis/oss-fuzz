@@ -33,6 +33,10 @@ RUN export GIT_VER=2.21.0 \
 RUN wget -q https://github.com/Kitware/CMake/releases/download/v3.14.6/cmake-3.14.6-Linux-x86_64.tar.gz
 RUN tar xf cmake-3.14.6-Linux-x86_64.tar.gz -C /usr/local --strip 1
 
+# Install build toolchain
+RUN wget https://github.com/osquery/osquery-toolchain/releases/download/1.0.0/osquery-toolchain-1.0.0.tar.xz
+RUN sudo tar xf osquery-toolchain-1.0.0.tar.xz -C /usr/local
+
 RUN git clone --depth 1 https://github.com/osquery/osquery osquery
 
 WORKDIR osquery

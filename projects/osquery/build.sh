@@ -30,6 +30,7 @@ cmake \
   -DOSQUERY_VERSION:string=0.0.0-fuzz \
   -DOSQUERY_FUZZ:BOOL=ON \
   -DOSQUERY_BUILD_TESTS:BOOL=ON \
+  -DOSQUERY_TOOLCHAIN_SYSROOT=/usr/local/osquery-toolchain \
   ..
 cmake \
   -DCMAKE_EXE_LINKER_FLAGS=${LIB_FUZZING_ENGINE} \
