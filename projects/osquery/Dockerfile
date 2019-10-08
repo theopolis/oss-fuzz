@@ -35,7 +35,7 @@ RUN tar xf cmake-3.14.6-Linux-x86_64.tar.gz -C /usr/local --strip 1
 
 # Install build toolchain
 RUN wget https://github.com/osquery/osquery-toolchain/releases/download/1.0.0/osquery-toolchain-1.0.0.tar.xz
-RUN sudo tar xf osquery-toolchain-1.0.0.tar.xz -C /usr/local
+RUN tar xf osquery-toolchain-1.0.0.tar.xz -C /usr/local
 
 RUN git clone --depth 1 https://github.com/osquery/osquery osquery
 

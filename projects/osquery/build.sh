@@ -26,6 +26,9 @@ PROJECT=osquery
 pushd "${SRC}/${PROJECT}"
 mkdir build && pushd build
 
+export CXXFLAGS="${CXXFLAGS} -Wl,-lunwind"
+export CFLAGS="${CFLAGS} -Wl,-lunwind"
+
 cmake \
   -DOSQUERY_VERSION:string=0.0.0-fuzz \
   -DOSQUERY_FUZZ:BOOL=ON \
