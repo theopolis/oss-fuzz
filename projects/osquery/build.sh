@@ -26,7 +26,7 @@ PROJECT=osquery
 pushd "${SRC}/${PROJECT}"
 mkdir build && pushd build
 
-export CXXFLAGS="${CXXFLAGS} -Wl,-lunwind"
+export CXXFLAGS="${CXXFLAGS} -Wl,-lunwind -Wl,-lc++abi"
 export CFLAGS="${CFLAGS} -Wl,-lunwind"
 
 cmake \
